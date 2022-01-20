@@ -22,6 +22,11 @@ let pokemonList = [
 ];
 
 //for loop to display the name and height of each pokemon in the array to the DOM
+//add remark to highlight big pokemon
 for (let i=0; i < pokemonList.length; i++) {
-    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") ");
+    if (pokemonList[i].height < 1.5) {
+        document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ") "  + "</p>")
+    } else {
+      document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ") " + "-Wow, that's a big Pokemon!" + "</p>")
+    }
 }
